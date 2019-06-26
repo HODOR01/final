@@ -239,6 +239,7 @@ void gravar_c(int la, int cb, float c[50][50]) { //op15
 
 
 int main() {
+  char m[50][50];
   FILE*file;
   int la, ca; // quantidade de linhas de A, quantidade de colunas de A
   int lb, cb; // quantidade de linhas de B, quantidade de colunas de B
@@ -323,7 +324,6 @@ int main() {
 		file = fopen("textoa.txt", "r");
 
         //variavel pra salvar os valores em forma de strings
-        char m[50][50];
         //contadores do vetor
         fscanf(file, "%d %d", &la, &ca);
         //varre a matriz
@@ -340,7 +340,6 @@ int main() {
 		
 		file = fopen("textob.txt", "r");
 
-        char m[50][50];
         //contadores do vetor
         int nl, nc, i, j;
 
