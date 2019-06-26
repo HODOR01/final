@@ -29,7 +29,7 @@ void atribuir_random_b(int lb, int cb, float b[50][50]) { //OPCAO 4
   }
 }
 void atribuir_a(int la, int ca, float a[50][50]) { //OPCAO 5
-  int i, j;       // Nesta etapa o lanço de repetição varre a matriz A para preenchimento dos termos
+  int i, j;       // Nesta etapa o lanÃ§o de repetiÃ§Ã£o varre a matriz A para preenchimento dos termos
   for (i = 0; i < la; i++) {
     for (j = 0; j < ca; j++) {
       //solicita o valor e salva o valor digitado na celula especificada
@@ -39,7 +39,7 @@ void atribuir_a(int la, int ca, float a[50][50]) { //OPCAO 5
   }
 }
 void atribuir_b(int lb, int cb, float b[50][50]) { //OPCAO 6
-  int i, j;       // Nesta etapa o lanço de repetição varre a matriz B para preenchimento dos termos
+  int i, j;       // Nesta etapa o lanÃ§o de repetiÃ§Ã£o varre a matriz B para preenchimento dos termos
   for (i = 0; i < lb; i++) {
     for (j = 0; j < cb; j++) {
       //solicita o valor e salva o valor digitado na celula especificada
@@ -49,7 +49,7 @@ void atribuir_b(int lb, int cb, float b[50][50]) { //OPCAO 6
   }
 }
 void soma(int la, int lb, int ca, int cb, float a[50][50], float b[50][50], float c[50][50]) { //OPCAO 7
-  int i, j; // Nesta etapa o lanço de repetição varre a matriz A e B(caso tenha quantidade de linhas e colunas iguais) somando termo a termo.
+  int i, j; // Nesta etapa o lanÃ§o de repetiÃ§Ã£o varre a matriz A e B(caso tenha quantidade de linhas e colunas iguais) somando termo a termo.
   if (ca == cb && la == lb)
   {
     //varre as matrizes
@@ -64,14 +64,14 @@ void soma(int la, int lb, int ca, int cb, float a[50][50], float b[50][50], floa
   else {
     printf("Essas matrizes NAO podem ser somadas");
   }
-  //salva as dimensões da matriz c
+  //salva as dimensÃµes da matriz c
   lc = lb;
   cc = cb;
 
 }
 
 void subtracao(int la, int lb, int ca, int cb, float a[50][50], float b[50][50], float c[50][50]) { //OPCAO 8
-  int i, j;       // Nesta etapa o lanço de repetição varre a matriz A e B(caso tenha quantidade de linhas e colunas iguais) subtraindo termo a termo.
+  int i, j;       // Nesta etapa o lanÃ§o de repetiÃ§Ã£o varre a matriz A e B(caso tenha quantidade de linhas e colunas iguais) subtraindo termo a termo.
   if (ca == cb && la == lb)
   {
     //varre as matrizes
@@ -86,13 +86,13 @@ void subtracao(int la, int lb, int ca, int cb, float a[50][50], float b[50][50],
   else {
     printf("Essas matrizes NAO podem ser somadas");
   }
-  //salva as dimensões da matriz c
+  //salva as dimensÃµes da matriz c
   lc = lb;
   cc = cb;
 }
 
 void mult(int la, int lb, int ca, int cb, float a[50][50], float b[50][50], float c[50][50]) { // OPCAO 9
-  int sum, i, j, k;     // Nesta etapa o lanço de repetição varre a matriz A e B(caso tenha quantidade de colunas de A igual a quantidade delinhas de B) multiplicando as matrizes
+  int sum, i, j, k;     // Nesta etapa o lanÃ§o de repetiÃ§Ã£o varre a matriz A e B(caso tenha quantidade de colunas de A igual a quantidade delinhas de B) multiplicando as matrizes
   if (ca == lb) {
     //varre as matrizes
     for (i = 0; i < la; i++) {
@@ -112,13 +112,13 @@ void mult(int la, int lb, int ca, int cb, float a[50][50], float b[50][50], floa
     printf("nao pode");
 
   }
-  //salva as dimensões de c
+  //salva as dimensÃµes de c
   lc = la;
   cc = cb;
 }
 
 void imprimir_a(int la, int ca, float a[50][50]) { //OPCAO 10
-  int i, j;        // Nesta etapa o lanço de repetição varre a matriz A e imprime na tela a matriz termo a termo.
+  int i, j;        // Nesta etapa o lanÃ§o de repetiÃ§Ã£o varre a matriz A e imprime na tela a matriz termo a termo.
   printf("\n");
   //varre a matriz
   for (i = 0; i < la; i++) {
@@ -130,7 +130,7 @@ void imprimir_a(int la, int ca, float a[50][50]) { //OPCAO 10
   }
 }
 void imprimir_b(int lb, int cb, float b[50][50]) { //OPCAO 11
-  int i, j;       // Nesta etapa o lanço de repetição varre a matriz B e imprime na tela a matriz termo a termo.
+  int i, j;       // Nesta etapa o lanÃ§o de repetiÃ§Ã£o varre a matriz B e imprime na tela a matriz termo a termo.
   printf("\n");
   //varre a matriz
   for (i = 0; i < lb; i++) {
@@ -142,7 +142,7 @@ void imprimir_b(int lb, int cb, float b[50][50]) { //OPCAO 11
   }
 }
 void imprimir_c(int la, int cb, float c[50][50]) { //OPCAO 12
-  int i, j;       // Nesta etapa o lanço de repetição varre a matriz C(Matriz resultante) e imprime na tela a matriz termo a termo.
+  int i, j;       // Nesta etapa o lanÃ§o de repetiÃ§Ã£o varre a matriz C(Matriz resultante) e imprime na tela a matriz termo a termo.
   printf("\n");
   //varre a matriz
   for (i = 0; i < la; i++) {
@@ -239,11 +239,12 @@ void gravar_c(int la, int cb, float c[50][50]) { //op15
 
 
 int main() {
-
+  FILE*file;
   int la, ca; // quantidade de linhas de A, quantidade de colunas de A
   int lb, cb; // quantidade de linhas de B, quantidade de colunas de B
   int i, j; //Variaveis do loop das matrizes
-  int opcao;//variavel da opção selecionada
+
+  int opcao;//variavel da opÃ§Ã£o selecionada
   float a[50][50], b[50][50], c[50][50]; // Matrizes de trabalho e Matriz resultado
   int op;
 
@@ -270,7 +271,7 @@ int main() {
     scanf("%d", &opcao);
     //selecionador
     switch (opcao) {
-      //opções de 1 a 16 descritas no menu, cada uma chama uma função excluindo 1 e 2
+      //opÃ§Ãµes de 1 a 16 descritas no menu, cada uma chama uma funÃ§Ã£o excluindo 1 e 2
       case 1:
         printf("\nDigite a quantidade de linhas da Matriz A: ");
         scanf("%d", &la);
@@ -318,10 +319,41 @@ int main() {
         imprimir_c(la, cb, c);
         break;
       case 13:
-        extrair_a(la, ca, a);
+        
+		file = fopen("textoa.txt", "r");
+
+        //variavel pra salvar os valores em forma de strings
+        char m[50][50];
+        //contadores do vetor
+        fscanf(file, "%d %d", &la, &ca);
+        //varre a matriz
+        for (i = 0; i < ca; i++) {
+          for (j = 0; j < la; j++) {
+            //salva o valor da matriz num vetor de carazcteres
+            fscanf(file, "%d", &m[i][j]);
+            //converte em numero
+            a[i][j] = m[i][j];
+          }
+        }
         break;
       case 14:
-        extrair_b(lb, cb, b);
+		
+		file = fopen("textob.txt", "r");
+
+        char m[50][50];
+        //contadores do vetor
+        int nl, nc, i, j;
+
+        fscanf(file, "%d %d", &lb, &cb);
+        //varre a matriz
+        for (i = 0; i < cb; i++) {
+          for (j = 0; j < lb; j++) {
+            //salva o valor da matriz num vetor de carazcteres
+            fscanf(file, "%d", &m[i][j]);
+            //converte em numero
+            b[i][j] = m[i][j];
+          }
+        }
         break;
       case 15:
         gravar_c(la, cb, c);
